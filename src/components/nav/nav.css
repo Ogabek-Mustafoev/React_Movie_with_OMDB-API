@@ -1,0 +1,335 @@
+nav {
+  width: 100%;
+  background: var(--white);
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 60px;
+  display: flex;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 96%;
+  margin: 0 auto;
+}
+nav img.logo {
+  height: 3.36rem;
+  width: 4.8rem;
+  display: inline-block;
+}
+.filter {
+  filter: invert(1);
+}
+nav .flex {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+nav .flex h3 {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .flex h3 .play {
+  font-size: 1.7rem;
+}
+.search_icon {
+  cursor: pointer;
+}
+nav .search-bar {
+  background: var(--light);
+  padding: 8px 1.6rem;
+  width: 32vw;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #86848c;
+  left: 15%;
+}
+nav .search-bar input[type="search"] {
+  color: var(--dark);
+  background: transparent;
+  width: 100%;
+}
+nav .search-bar input[type="search"]::-moz-placeholder {
+  color: var(--gray-dark);
+}
+nav .search-bar input[type="search"]:-ms-input-placeholder {
+  color: var(--gray-dark);
+}
+nav .search-bar input[type="search"]::placeholder {
+  color: var(--gray-dark);
+}
+nav .profile-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+nav .profile-area .theme-btn {
+  display: flex;
+  background: var(--light);
+  width: 5rem;
+  height: 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+nav .profile-area .theme-btn span {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+nav .profile-area .theme-btn .active {
+  background: var(--dark);
+  border-radius: 6px;
+  color: var(--white);
+}
+nav .profile-area .profile {
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+nav .profile-area .profile .profile-photo {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--gray-dark);
+}
+nav .profile-area button {
+  display: none;
+}
+.up_to-phone {
+  z-index: 5;
+  position: fixed;
+  top: 6rem;
+  right: -100%;
+  background: var(--white) !important;
+  padding: 8px 2.6rem;
+  width: 56vw !important;
+  border-radius: 6px;
+  align-items: center;
+  color: #86848c;
+  border: 1px solid rgb(200, 200, 200);
+  box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.2);
+  animation: showInput 0.5s ease forwards;
+}
+
+@keyframes showInput {
+  to {
+    right: 1rem;
+  }
+}
+/* ----------------------- expand profile ----------------- */
+.expand {
+  position: fixed;
+  height: 22rem;
+  width: 45rem;
+  background: var(--gray-dark);
+  right: 2rem;
+  top: 0.1rem;
+  border-radius: 2rem;
+  z-index: 15;
+}
+.expand .expand__content {
+  width: 50%;
+  height: 100%;
+  color: var(--white);
+  position: relative;
+  margin-top: 1rem;
+}
+.expand .expand__content p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--white);
+}
+.expand .profile-photo {
+  height: 100% !important;
+  width: 50% !important;
+  border-radius: 2rem !important;
+}
+.expand .profile-photo img {
+  background: var(--dark);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.expand .expand__content .btn {
+  margin: 1rem 1rem 1rem 0rem;
+}
+.expand .expand__content .talk {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  align-items: center;
+}
+.expand .expand__content .talk i {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--white);
+  transition: all 0.4s ease;
+}
+.expand .expand__content .talk i:hover {
+  transform: scale(1.2);
+  color: rgb(64, 61, 70);
+}
+.expand .expand__content .expand__close {
+  display: inline-block;
+  position: fixed;
+  margin: 0;
+  right: 4vw;
+  cursor: pointer;
+}
+/* ------------------------- radio button----------------------- */
+.radio_container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  top: 5rem;
+}
+.selector {
+  width: 60%;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 9999px;
+  box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.33);
+  margin: 1rem 0;
+}
+.selector-item {
+  flex-basis: calc(70% / 3);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selector-item_radio {
+  appearance: none;
+  display: none;
+}
+.selector-item_label {
+  color: var(--dark);
+  height: 80%;
+  width: 100%;
+  text-align: center;
+  border-radius: 9999px;
+  line-height: 250%;
+  font-weight: 400;
+  transition-duration: 0.5s;
+  transition-property: transform, color, box-shadow;
+  transform: none;
+}
+.selector-item_radio:checked + .selector-item_label {
+  background-color: rgb(71, 7, 234);
+  color: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ================ media for tablets ================= */
+@media (orientation: landscape) {
+  .selector {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  canvas#chart {
+    padding: 0.7rem;
+  }
+  nav .profile-area {
+    gap: 2rem;
+  }
+  nav .profile-area button {
+    display: inline;
+    background: transparent;
+    color: var(--dark);
+  }
+}
+/* ============= media for phones =================== */
+@media screen and (max-width: 700px) {
+  .expand {
+    min-height: 23rem;
+    width: 95vw;
+    right: 1rem;
+    top: 0.1rem;
+    border-radius: 1.5rem;
+  }
+  .expand .profile-photo {
+    width: 45% !important;
+    border-radius: 1.5rem !important;
+  }
+  .expand .expand__content {
+    overflow-y: auto;
+    width: 55%;
+  }
+
+  .expand .expand__content .expand__close {
+    position: fixed;
+    margin: 0;
+    right: 1.5rem;
+  }
+  .expand .expand__content .btn {
+    margin: 0.6rem 0.7rem 1rem 0rem;
+    padding: 0.5rem 1rem;
+  }
+  .up_to-phone {
+    width: 70vw !important;
+  }
+  canvas#chart {
+    padding: 0.2rem;
+  }
+  nav .profile-area {
+    gap: 1rem;
+  }
+  nav .search-bar .up_to-tablet {
+    display: none;
+  }
+  nav .search-bar {
+    background: var(--light);
+    padding: 6px 0.6rem;
+    width: 3.3rem;
+    gap: 2.6rem;
+  }
+  nav .profile h5,
+  nav .profile span {
+    display: none;
+  }
+  .selector {
+    width: 65%;
+  }
+}
+@media (max-width: 500px) {
+  .selector {
+    width: 90%;
+  }
+  .expand .expand__content .talk {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 350px) {
+  nav .profile-area {
+    gap: 0.5rem;
+  }
+  .expand .expand__content .talk {
+    width: 80%;
+  }
+}

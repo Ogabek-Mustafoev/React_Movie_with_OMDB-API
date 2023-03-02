@@ -1,0 +1,126 @@
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 88vh;
+  z-index: 13;
+}
+aside button#close-btn {
+  display: none;
+}
+aside .sidebar {
+  position: fixed;
+}
+aside .sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  height: 4.2rem;
+  color: #86848c;
+  position: relative;
+  width: 16rem;
+}
+aside .sidebar a:hover {
+  color: rgb(71, 7, 234);
+}
+aside .sidebar a:hover span {
+  margin-left: 2rem;
+}
+aside .sidebar a.active {
+  background: var(--white);
+  color: rgb(71, 7, 234);
+  width: 100%;
+}
+aside .sidebar a.active::before {
+  content: "";
+  width: 6px;
+  height: 100%;
+  position: absolute;
+  background: rgb(71, 7, 234);
+}
+aside .sidebar a span {
+  font-size: 1.7rem;
+  margin-left: 3rem;
+  transition: all 0.3s ease;
+}
+aside .sidebar h4 {
+  font-weight: 500;
+}
+aside .sidebar a span {
+  font-size: 1.8rem;
+}
+
+aside .updates {
+  background: var(--white);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0.5rem;
+}
+aside .updates span {
+  font-size: 2.8rem;
+}
+aside .updates small {
+  font-size: 0.84rem;
+  font-weight: 400;
+}
+aside .updates h4 {
+  margin: 0.5rem 0;
+}
+aside .updates a {
+  display: block;
+  width: 100%;
+  background: rgb(71, 7, 234);
+  color: white;
+  border-radius: 1rem;
+  padding: 0.5rem 0;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+aside .updates a:hover {
+  box-shadow: 0 1rem 2rem rgba(71, 7, 234, 0.2);
+}
+@media screen and (max-width: 1024px) {
+  aside {
+    width: 16rem;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 13;
+    background: var(--light);
+    height: 100vh;
+    box-shadow: 2rem 0 2rem rgba(68, 66, 72, 0.2);
+    display: none;
+    -webkit-animation: showSideBar 0.5s ease forwards;
+    animation: showSideBar 0.5s ease forwards;
+  }
+  aside button#close-btn {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 4;
+    background: transparent;
+    color: var(--dark);
+  }
+  aside .sidebar {
+    margin-top: 5rem;
+  }
+
+  @keyframes showSideBar {
+    to {
+      left: 0;
+    }
+  }
+}
+@media (max-height: 533px) {
+  aside .updates {
+    display: none !important;
+  }
+  aside {
+    overflow-y: auto;
+  }
+}

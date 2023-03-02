@@ -1,0 +1,17 @@
+main {
+  display: grid;
+  grid-template-columns: 16rem auto 20rem;
+  gap: 2rem;
+  width: 96%;
+  margin: 6rem auto 4rem;
+  min-height: calc(100vh - 60px - 231px);
+  overflow: hidden;
+}
+@media screen and (max-width: 1024px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .right {
+    display: none !important;
+  }
+}

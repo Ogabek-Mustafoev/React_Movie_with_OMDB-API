@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+.trend_wrapper {
+  width: 100%;
+}
+.trend_heading {
+  margin: 1rem 0;
+  width: 100%;
+  text-align: center;
+  color: var(--dark);
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  background: var(--white);
+}
+
+.trend_container {
+  width: 100%;
+  display: flex;
+  overflow-x: hidden;
+  width: 100%;
+}
+.panel {
+  height: 55rem;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  flex: 0.3;
+  margin: 0.7rem;
+  position: relative;
+  transition: flex 0.7s ease-out;
+  overflow: hidden;
+}
+.panel img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(40%);
+  transition: all 0.7s ease-out;
+}
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  margin: 1rem 0;
+  padding: 1rem;
+  width: 100%;
+  word-break: normal;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+.panel.panel_active img {
+  filter: brightness(105%);
+}
+.panel.panel_active {
+  flex: 2;
+}
+.panel.panel_active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+.trend_wrapper ol {
+  padding: 1.5rem;
+  line-height: 1.7;
+}
+.trend_wrapper ol li {
+  list-style: decimal;
+  font-size: 1.4rem;
+}
+@media (max-width: 991px) {
+  .panel {
+    border-radius: 20px;
+    margin: 0.5rem;
+    flex: 0.25;
+    height: 56rem;
+  }
+  .panel.panel_active {
+    flex: 3;
+    margin: 0.5rem 1rem;
+  }
+  .trend_wrapper ol li {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .panel {
+    height: 40rem;
+    border-radius: 20px;
+  }
+  .panel.panel_active {
+    flex: 3;
+    margin: 0.5rem 0.7rem;
+  }
+  .trend_heading {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+  }
+  .trend_wrapper ol li {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .panel {
+    margin: 0.5rem 0.3rem;
+    flex: 0.2;
+    height: 31.7rem;
+    border-radius: 20px;
+  }
+  .panel.panel_active {
+    flex: 3;
+    margin: 0.5rem 0.7rem;
+  }
+  .panel h3 {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    bottom: 8px;
+  }
+}

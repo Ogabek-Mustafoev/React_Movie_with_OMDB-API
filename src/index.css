@@ -1,0 +1,160 @@
+/* // ROOTS */
+:root {
+  --white: #fff;
+  --light: #f0eff5;
+  --gray-dark: #56555e;
+  --dark: #27282f;
+}
+
+.dark-theme {
+  --white: #131316;
+  --light: #23232a;
+  --dark: #ddd;
+  --gray-dark: #adacb5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  background: var(--light);
+  font-family: poppins, sans-serif;
+  min-height: 100vh;
+  color: var(--dark);
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 7.6rem;
+}
+
+p {
+  font-size: 0.86rem;
+  color: var(--gray-dark);
+}
+
+small {
+  font-weight: 300;
+  font-size: 0.77rem;
+}
+
+.text-muted {
+  color: #86848c;
+}
+
+.primary {
+  color: rgb(71, 7, 234);
+}
+
+.danger {
+  color: rgb(255, 67, 54);
+}
+
+.success {
+  color: rgb(34, 202, 75);
+}
+
+.purple {
+  color: rgb(160, 99, 245);
+}
+
+.bg-primary {
+  background: rgb(71, 7, 234);
+  box-shadow: 0 0.8rem 0.8rem rgba(71, 7, 234, 0.2);
+}
+
+.bg-danger {
+  background: rgb(255, 67, 54);
+  box-shadow: 0 0.8rem 0.8rem rgba(255, 67, 54, 0.2);
+}
+
+.bg-success {
+  background: rgb(34, 202, 75);
+  box-shadow: 0 0.8rem 0.8rem rgba(34, 202, 75, 0.2);
+}
+
+.bg-purple {
+  background: rgb(160, 99, 245);
+  box-shadow: 0 0.8rem 0.8rem rgba(160, 99, 245, 0.2);
+}
+
+.bg-dark {
+  background: var(--dark);
+  box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+.hide {
+  display: none !important;
+}
+.show {
+  display: block;
+}
+button:hover {
+  cursor: pointer;
+}
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--white);
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--dark);
+  transition: 0.5s all ease;
+  background: var(--dark);
+}
+.btn:hover {
+  background: var(--white);
+  color: var(--dark);
+  border-color: transparent;
+}
+@media screen and (max-width: 410px) {
+  html {
+    font-size: 10px;
+  }
+  nav {
+    height: 50px;
+  }
+  .expand {
+    height: 19rem;
+  }
+}

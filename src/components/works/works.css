@@ -1,0 +1,9 @@
+.work_heading {
+  width: 100%;
+  height: fit-content;
+  margin: 10rem 0;
+  padding: 1rem 2rem;
+  text-align: center;
+  color: var(--dark);
+  background: var(--white);
+}

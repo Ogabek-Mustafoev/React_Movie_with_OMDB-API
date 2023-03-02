@@ -1,0 +1,9 @@
+section.right {
+  position: relative;
+}
+section.right .right_wrapper {
+  position: fixed;
+}
+.announce_img {
+  height: 15vw !important;
+}
