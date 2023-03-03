@@ -9,8 +9,8 @@
 <h2>Project Screenshots:</h2>
 
  <div style="display: flex; justify-content: space-between; width=100%;">
-  <img src="https://charming-semolina-34cdcd.netlify.app/assets/Blog-post/post-2.png" alt="project-screenshot" width="450">
-  <img src="https://charming-semolina-34cdcd.netlify.app/assets/Blog-post/post-3.png" alt="project-screenshot" width="450">
+  <img src="https://charming-semolina-34cdcd.netlify.app/assets/Blog-post/post-2.png" alt="project-screenshot" width="500">
+  <img src="https://charming-semolina-34cdcd.netlify.app/assets/Blog-post/post-3.png" alt="project-screenshot" width="500">
  </div>
 
 <h2>🛠️ Installation Steps:</h2>
