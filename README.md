@@ -1,6 +1,6 @@
 <h1 align="center" id="title">Movie-App</h1>
 
-<p id="description">Movie-App with React Function Component. This project is fully responsive on different devices and window sizes. It also supports dark/light theme.</p>
+<p id="description">Movie-App with OMDB-API built on React Function Component. This project is fully responsive on different devices and window sizes. It also supports dark/light theme.</p>
 
 <h2>🚀 Demo</h2>
 
